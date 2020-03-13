@@ -8,14 +8,19 @@ th {
 }
 
 #divProduto {
-  border: 1px solid #000000;
+  margin-top: 6px;
 }
 
 #botaoComprar {
   float: right;
-  top: 20px;
+}
+.totalTexto {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #total {
-  text-align: right;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
 }

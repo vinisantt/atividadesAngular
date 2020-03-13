@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,27 +10,29 @@
     <div class="container">
       <div class="container-fluid">
         <h1>Loja Virtual</h1>
-        <div *ngFor="let produto of listaProdutos" class="card-body">
-          <div id="divProduto">
-            <p>
-              <b
-                ><font size="4">
-                  {{ produto.nome }}
-                </font>
-              </b>
-              <br />
-              R$ {{ produto.preco }}
-            </p>
-            <button
-              class="btn btn-success sm"
-              id="botaoComprar"
-              (click)="adicionaAoCarrinho(produto)"
-            >
-              Comprar
-            </button>
-          </div>
-          <br />
+        <div
+          class="container-fluid"
+          id="divProduto"
+          *ngFor="let produto of listaProdutos"
+        >
+          <span>
+            <b>
+              <font size="4">
+                {{ produto.nome }}
+              </font>
+            </b>
+            <br />
+            {{ produto.preco }}
+          </span>
+          <button
+            class="btn btn-success sm"
+            id="botaoComprar"
+            (click)="adicionaAoCarrinho(produto)"
+          >
+            Comprar
+          </button>
         </div>
+
         <h1>Carrinho</h1>
         <div class="container-fluid">
           <table class="table table-sm">
@@ -52,15 +54,8 @@
         </div>
         <br />
 
-        <div class="container col-2">
-          <div>
-            <h3><b>Total da compra:</b></h3>
-          </div>
-          <div>
-            <p>{{ somaCarrinho }}</p>
-          </div>
-        </div>
-
+        <span class="totalTexto"> Total da compra:</span>
+        <span id="total">R$ {{ somaCarrinho }}</span>
         <br />
       </div>
     </div>

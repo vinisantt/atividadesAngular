@@ -1,0 +1,25 @@
+<div class="container">
+	<h2>Cadastro de pessoas</h2>
+	<br />
+	<div class="container-fluid">
+		<label for="nome">Nome:</label>&nbsp;
+		<input
+			#nomePessoa
+			(input)="this.pessoa = nomePessoa.value"
+			name="nome"
+			type="text"
+			minlength="3"
+		/>&nbsp;
+		<button
+			(click)="
+				inserirPessoa(pessoa); nomePessoa.value = ''; nomePessoa.focus()
+			"
+		>
+			OK
+		</button>
+	</div>
+	<br />
+	<h2>Pessoas cadastradas</h2>
+	<br />
+	<li *ngFor="let pessoa of pessoas">{{ pessoa }}</li>
+</div>

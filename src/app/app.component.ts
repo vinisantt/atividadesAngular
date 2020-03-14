@@ -12,8 +12,8 @@ export class AppComponent {
 	inserirPessoa(pessoa: string) {
 		this.pessoas.push(pessoa);
 	}
-	excluirPessoa(pessoa: string) {
-		let index = this.pessoas.indexOf(pessoa);
-		this.pessoas.splice(index);
+	excluirPessoa(p: string) {
+		let index: number = this.pessoas.indexOf(p);
+		this.pessoas.splice(index, 1);
 	}
 }

@@ -1,4 +1,5 @@
-<div class="container">
+<div id="container" class="container">
+	<br />
 	<h2>Cadastro de pessoas</h2>
 	<br />
 	<div class="container-fluid">
@@ -21,21 +22,18 @@
 	<br />
 	<h2>Pessoas cadastradas</h2>
 	<br />
-	<table class=" table table-bordereds">
+	<table class=" table table-bordered">
 		<thead>
 			<tr>
 				<th>Nome</th>
-				<th>Ação</th>
+				<th>Excluir</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr *ngFor="let pessoa of pessoas">
-				<td>{{ pessoa }}</td>
+			<tr *ngFor="let p of pessoas">
+				<td>{{ p }}</td>
 				<td>
-					<button
-						(click)="excluirPessoa(pessoa)"
-						class="btn-outline-danger"
-					>
+					<button (click)="excluirPessoa(p)" class="btn-danger">
 						X
 					</button>
 				</td>

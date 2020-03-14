@@ -5,7 +5,7 @@
 		<label for="nome">Nome:</label>&nbsp;
 		<input
 			#nomePessoa
-			(input)="this.pessoa = nomePessoa.value"
+			(input)="pessoa = nomePessoa.value"
 			name="nome"
 			type="text"
 			minlength="3"
@@ -21,5 +21,25 @@
 	<br />
 	<h2>Pessoas cadastradas</h2>
 	<br />
-	<li *ngFor="let pessoa of pessoas">{{ pessoa }}</li>
+	<table class=" table table-bordereds">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Ação</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let pessoa of pessoas">
+				<td>{{ pessoa }}</td>
+				<td>
+					<button
+						(click)="excluirPessoa(pessoa)"
+						class="btn-outline-danger"
+					>
+						X
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

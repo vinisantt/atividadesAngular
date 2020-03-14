@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 @Component({
 	selector: "app-root",
 	templateUrl: "./app.component.html",
-	styles: ["./app.component.css"]
+	styleUrls: ["./app.styles.css"]
 })
 export class AppComponent {
 	pessoa: string;
@@ -11,5 +11,9 @@ export class AppComponent {
 
 	inserirPessoa(pessoa: string) {
 		this.pessoas.push(pessoa);
+	}
+	excluirPessoa(pessoa: string) {
+		let index = this.pessoas.indexOf(pessoa);
+		this.pessoas.splice(index);
 	}
 }

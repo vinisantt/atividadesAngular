@@ -6,3 +6,11 @@ td {
 #container {
 	border: 1px solid #000000;
 }
+h5 {
+	margin-top: 4px;
+	margin-bottom: 0px;
+	margin-right: 4px;
+}
+#idade {
+	margin-right: 10px;
+}

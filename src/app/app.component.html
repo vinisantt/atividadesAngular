@@ -1,23 +1,37 @@
+<br />
 <div id="container" class="container">
 	<br />
 	<h2>Cadastro de pessoas</h2>
 	<br />
-	<div class="container-fluid">
-		<label for="nome">Nome:</label>&nbsp;
-		<input
-			#nomePessoa
-			(input)="pessoa = nomePessoa.value"
-			name="nome"
-			type="text"
-			minlength="3"
-		/>&nbsp;
-		<button
-			(click)="
-				inserirPessoa(pessoa); nomePessoa.value = ''; nomePessoa.focus()
-			"
-		>
-			OK
-		</button>
+	<div class="form-group row-2">
+		<div class="col-sm-6 row">
+			<h5 for="nome">Nome:</h5>
+			<input
+				class="form-control col-sm-6"
+				#nomePessoa
+				(input)="pessoa = nomePessoa.value"
+				[(value)]="pessoa"
+				id="nome"
+				type="text"
+				minlength="3"
+			/>
+		</div>
+		<br />
+		<div class="col-sm-8 row">
+			<h5>Idade:</h5>
+			<input
+				class="form-control col-sm-2"
+				type="number"
+				#idadePessoa
+				(input)="idade = idadePessoa.value"
+				[(value)]="idade"
+				id="idade"
+			/>
+
+			<button class="btn btn-dark" (click)="inserirPessoa(pessoa, idade); nomePessoa.focus()">
+				OK
+			</button>
+		</div>
 	</div>
 	<br />
 	<h2>Pessoas cadastradas</h2>
@@ -26,12 +40,14 @@
 		<thead>
 			<tr>
 				<th>Nome</th>
+				<th>Idade</th>
 				<th>Excluir</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr *ngFor="let p of pessoas">
-				<td>{{ p }}</td>
+				<td>{{ p.nome }}</td>
+				<td>{{ p.idade }}</td>
 				<td>
 					<button (click)="excluirPessoa(p)" class="btn-danger">
 						X

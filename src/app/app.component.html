@@ -57,4 +57,8 @@
 		</tbody>
 	</table>
 	<span>Total de pessoas cadastradas: {{ pessoas.length }}</span>
+	<br />
+	<span *ngIf="menor != undefined">Pessoa mais jovem: {{ menor.nome }}, com {{ menor.idade }} ano(s)</span>
+	<br />
+	<span *ngIf="maior != undefined"> Pessoa mais idosa: {{ maior.nome }}, com {{ maior.idade }} ano(s)</span>
 </div>

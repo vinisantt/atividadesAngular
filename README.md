@@ -1,4 +1,4 @@
-# Atividade 7 - Loja Virtual
+# Loja Virtual
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.0.3.
 

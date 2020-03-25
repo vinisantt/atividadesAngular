@@ -1,27 +1,13 @@
-# CadastroPessoas
+# Cadastro Pessoas com Totalizador
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.0.3.
 
-## Development server
+## Servidor de desenvolvimento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Rode `ng serve`. Navegue para `http://localhost:4200/`.
 
-## Code scaffolding
+# Tela
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![cadastrocomtotalizador](https://user-images.githubusercontent.com/24749522/77495104-5f01fd80-6e26-11ea-9a83-ef08d2ceabce.png)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Tela simples para cadastro de pessoas, contando com uma entrada de texto para que a pessoa digite seu nome que ao clicar no botão "OK" será adicionado à lista de nomes que é exibida logo abaixo de "Pessoas cadastradas". Para excluir uma pessoa da lista basta clicar no botão "X" em vermelho na coluna "Excluir", ao fazer isso a tabela é atualizada automaticamente. Nesta atividade foi incluído um contador de pessoas cadastradas, que é mostrado logo após a tabela de pessoas.

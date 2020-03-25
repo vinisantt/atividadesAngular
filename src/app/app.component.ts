@@ -11,16 +11,15 @@ export class AppComponent {
 	pessoas: Array<any> = [];
 
 	inserirPessoa(pessoa: string, idade: number) {
-		if (pessoa == "" || idade == 0) {
-			alert("Preencha o nome e idade corretamente!");
+		if (pessoa == "") {
+			alert("Preencha o nome corretamente!");
 		} else {
-			this.pessoas.push({ nome: pessoa, idade: idade });
+			this.pessoas.push({ nome: pessoa });
 			this.pessoa = "";
-			this.idade = 0;
 		}
 	}
 	excluirPessoa(pessoa: any) {
-		let index: number = this.pessoas.findIndex(pessoa => pessoa.nome == pessoa.nome);
+		let index: number = this.pessoas.findIndex(pe => pe.nome == pessoa.nome);
 		this.pessoas.splice(index, 1);
 	}
 }

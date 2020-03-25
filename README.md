@@ -1,4 +1,4 @@
-# CadastroPessoas
+# Cadastro de Pessoas
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.0.3.
 
